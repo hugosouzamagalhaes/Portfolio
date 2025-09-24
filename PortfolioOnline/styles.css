@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --verde: #0dc535;
+    --primaria: #00ADB5;
+    --secundaria: #FF6F3C;
+    --escuro: #0D1B2A;
+    --azul: #3AB4F2;
+    --claro: #EAEAEA;
+    --branco: #0d09f3;
+    --transparente: rgba(255, 255, 255, 0.1);
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+    line-height: 1.6;
+}
+
+.navegacao {
+    background-color: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.links {
+    color: var(--claro);
+    text-decoration: none;
+    padding: 0.5rem;
+    position: relative;
+    font-weight: 800;
+}
+.links::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg,  var(--branco), var(--azul));
+    transition: width 0.3s ease;
+}
+.links:hover::before{
+    width: 100%;
+}
+.cabecalho {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.foto{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 4px solid var(--transparente);
+}
+h1 {
+    font-size: 3.5rem;
+    color: var(--azul);
+    font-weight: bold;
+    margin: 10px;
+}
+.pmain {
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+.sobre {
+    padding: 6rem 2rem;
+}
+.titulosobre {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.caixasobre {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--transparente);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+.textosobre {
+    text-align: center;
+    font-size: 1rem;
+}
+.projetos{
+    padding: 6rem 2rem;
+}
+.tituloprojetos{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--claro);
+}
+.caixaprojetos{
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--transparente);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+.temp{
+    text-align: center;
+}
+.contato{
+    padding: 6rem 2rem;
+}
+.titulocontato{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.formulario{
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--transparente);
+}
+.campoform{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--claro);
+    border: 1px solid var(--transparente);
+}
+.grupoform{
+    margin-bottom: 1.5rem;
+}
+.botao{
+    color: var(--escuro);
+    background: var(--verde);
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}

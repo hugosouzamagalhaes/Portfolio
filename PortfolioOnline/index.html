@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/icone.png" type="image/png">
+    <title>Hugo Magalhães | Portfólio</title>
+</head>
+
+<body>
+    <div class="efeito"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="links">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="links">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="links">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="links">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/fotopc2.png" alt="Imagem de Hugo" class="foto">
+        <h1>Hugo Magalhães</h1>
+        <p class="pmain">Analista de Dados</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="titulosobre">Quem sou eu</h2>
+        <div class="caixasobre">
+            <p class="textosobre">Tudo bem?! Meu nome é Hugo, sou analista de dados e estudante de sistemas de
+                informação. Sou
+                apaixonado por tecnologia e desafios que envolvem lógica e criatividade.
+                Atualmente, estou me aprofundando em análise de dados com Power BI e SQL e também me aventurando na
+                programação. Estou sempre buscando transformar teoria
+                em prática através de projetos reais. Meu objetivo é iniciar minha carreira na área de análise de dados
+                e desenvolvimento, contribuindo com soluções que façam
+                diferença e, ao mesmo tempo, evoluindo como profissional. Fora do código, gosto bastante de música,
+                livros e jogos, além de ser uma pessoa muito curiosa.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="tituloprojetos">Meus Projetos</h2>
+        <div class="caixaprojetos">
+            <h3 class="temp">Em desenvolvimento...</h3>
+            <!--<div class="cardsprojetos">
+                <img src="" alt="Projeto 1" class="projetosimagem">
+                <h3 class="infoprojetos">Relatório x</h3>
+                <p class="textoprojetos"></p>
+            </div>
+
+            <div class="cardsprojetos">
+                <img src="" alt="Projeto 2" class="projetosimagem">
+                <h3 class="infoprojetos">Relatório x</h3>
+                <p class="textoprojetos"></p>
+            </div>
+
+            <div class="cardsprojetos">
+                <img src="" alt="Projeto 3" class="projetosimagem">
+                <h3 class="infoprojetos">Relatório x</h3>
+                <p class="textoprojetos"></p>
+            </div>
+
+        </div> -->
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="titulocontato">Contato</h2>
+        <form id="formulario" class="formulario" onsubmit="msg(event)">
+            <div class="grupoform">
+                <input placeholder="Nome" class="campoform" id="nome">
+            </div>
+
+            <div class="grupoform">
+                <textarea class="campoform" placeholder="Digite sua mensagem" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao">Enviar mensagem via WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function msg(event) {
+            event.preventDefault()
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5571996526996'
+            const texto = `Oi Hugo! Me chamo ${nome}, ${mensagem}`
+            const mensagemform = encodeURIComponent(texto)
+            const link = `https://wa.me/${telefone}?text=${mensagemform}`
+            window.open(link, '_blank')
+        }
+    </script>
+</body>
+
+</html>
