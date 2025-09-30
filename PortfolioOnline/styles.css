@@ -31,7 +31,7 @@ body {
 .navegacao {
     background-color: rgba(15, 23, 42, 0.8);
     width: 100%;
-    padding: 1rem;
+    padding: 1.5rem;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -42,7 +42,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1.7rem;
 }
 .links {
     color: var(--claro);
@@ -165,4 +165,5 @@ h1 {
     width: 100%;
     transition: all 0.5 ease;
 }
+
 
